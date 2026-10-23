@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sketchbook | Jasmin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+<body class="sketchbook-page">
+
+  <nav class="sketchbook-menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="narrative.html">Narrative Illustrated</a>
+  </nav>
+
+  <main class="sketchbook-main">
+
+  <main class="sketchbook-main">
+
+    <h1 class="sketchbook-title">My Sketchbook</h1>
+
+    <p class="sketchbook-instruction">
+      photo studies * figure drawing practice * and little ideas along the way.
+    </p>
+
+    <div class="sketchbook-stage">
+
+      
+<div id="flipbook">
+  <div class="page"><img src="Image/sketch 12.jpeg" alt="Sketch 1"></div>
+  <div class="page"><img src="Image/sketch 14.jpeg" alt="Sketch 2"></div>
+  <div class="page"><img src="Image/sketch 11.jpg" alt="Sketch 3"></div>
+  <div class="page"><img src="Image/sketch 8.jpg" alt="Sketch 4"></div>
+  <div class="page"><img src="Image/sketch 7.jpeg" alt="Sketch 5"></div>
+  <div class="page"><img src="Image/sketch 5.jpeg" alt="Sketch 6"></div>
+  <div class="page"><img src="Image/sketch 16 r.jpg" alt="Sketch 7"></div>
+  <div class="page"><img src="Image/sketch 16 l.jpg" alt="Sketch 8"></div>
+  <div class="page"><img src="Image/sketch 1.jpeg" alt="Sketch 9"></div>
+  <div class="page"><img src="Image/sketch 4.jpg" alt="Sketch 10"></div>
+  <div class="page"><img src="Image/sketch 2.jpeg" alt="Sketch 11"></div>
+  <div class="page"><img src="Image/sketch 3.jpg" alt="Sketch 12"></div>
+  <div class="page"><img src="Image/sketch 6.jpeg" alt="Sketch 13"></div>
+  <div class="page"><img src="Image/sketch 15.jpeg" alt="Sketch 14"></div>
+  <div class="page"><img src="Image/sketch 13 l.jpg" alt="Sketch 15"></div>
+  <div class="page"><img src="Image/sketch 13 r.jpg" alt="Sketch 16"></div>
+</div>
+
+
+    </div>
+
+    <p class="sketchbook-bottom-note">
+      
+    </p>
+
+  </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+
+<script>
+  const book = document.getElementById("flipbook");
+
+  const pageFlip = new St.PageFlip(book, {
+  width: 800,
+  height: 1000,
+  size: "stretch",
+  minWidth: 400,
+  maxWidth: 800,
+  minHeight: 500,
+  maxHeight: 1000,
+  showCover: false,
+  usePortrait: false,
+  maxShadowOpacity: 0.3,
+  mobileScrollSupport: false
+});
+
+  pageFlip.loadFromHTML(
+    document.querySelectorAll("#flipbook .page")
+  );
+</script>
+</body>
+</html>

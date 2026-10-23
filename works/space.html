@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>space| Illustration</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Special+Elite&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../Style.css">
+
+  <style>
+
+   body {
+  margin: 50px 0 20px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+.page-layout {
+  position: relative;
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.artwork-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 0%;
+  box-sizing: border-box;
+}
+
+.main-artwork {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 100px);
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.top-nav a {
+  color: #333;
+  text-decoration: none;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+}
+
+.top-nav a:hover {
+  opacity: 0.6;
+}
+
+.artwork-background {
+  background-image: url("../Image/background\ light.jpg");
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 1000px auto;
+
+  display: block;
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  padding: 5px 8px;
+  box-sizing: border-box;
+}
+  
+  </style>
+</head>
+
+<body>
+
+<div class="page-layout">
+  <a href="../index.html" class="detail-logo">
+  <img src="../Image/gif_logo.gif" alt="Jasmin logo">
+</a>
+
+  <nav class="top-nav">
+    <a href="../Narrative.html">Back</a>
+    <a href="../index.html">Home</a>
+    <a href="../About.html">About Me</a>
+    <a href="../Sketch.html">Sketch</a>
+  </nav>
+
+  <div class="artwork-background">
+   <div class="artwork-area">
+    <img
+      class="main-artwork"
+      src="../Image/principal hw space.png"
+      alt="space illustration"
+    >
+   </div>
+ </div>
+
+</div>
+</body>
+</html>

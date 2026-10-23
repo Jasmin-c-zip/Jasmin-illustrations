@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narrative Illustration — Jasmin</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="Style.css">
+</head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f1e9;
+      color: #33312e;
+      font-family: 'Special Elite', cursive;
+    }
+
+    header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 15px 3%;
+  background-color: #e9eaff;
+}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .logo {
+      font-size: 20px;
+      letter-spacing: 2px;
+    }
+
+    .header-logo {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+    .back {
+  font: 20px 'Special Elite', cursive;
+}
+.header-menu {
+  display: flex;
+  align-items: flex-end;
+  gap: 24px;
+}
+
+.header-menu a {
+  font-family: 'Special Elite', cursive;
+  font-size: 22px;
+  color: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.header-menu a:hover {
+  opacity: 0.55;
+}
+
+    .heading {
+      padding: 36px 5% 45px;
+    }
+
+    .heading p {
+      font: 20px 'Indie Flower', cursive;
+      letter-spacing: 3px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 76px);
+      font-weight: normal;
+      margin: 20px 0;
+    }
+
+    .gallery {
+      padding: 0 5% 80px;
+      columns: 3;
+      column-gap: 28px;
+    }
+
+    .art {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+      break-inside: avoid;
+    }
+
+    .art:nth-child(even) {
+      margin-top: 0px;
+    }
+
+    .picture {
+        display:block;
+      width: 100%;
+      height:auto;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+
+    .art:hover .picture {
+      transform: translateY(-5px);
+    }
+
+    .placeholder {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #71685e;
+      font: 12px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    .one {
+      aspect-ratio: 3 / 4;
+      background: #d8c9b8;
+    }
+
+    .two {
+      aspect-ratio: 4 / 5;
+      background: #c7cfc0;
+    }
+
+    .three {
+      aspect-ratio: 4 / 3;
+      background: #d8c5c1;
+    }
+
+    .four {
+      aspect-ratio: 3 / 4;
+      background: #c8c5d1;
+    }
+
+    .caption {
+      padding-top: 13px;
+      font-size: 18px;
+    }
+
+    .year {
+      margin-top: 5px;
+      font: 15px 'Indie Flower', cursive;
+      color: #898078;
+    }
+
+    footer {
+      padding: 25px 5%;
+      font: 11px 'Indie Flower', cursive;
+      color: #888078;
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        gap: 10px 14px;
+      }
+
+      .art:nth-child(even) {
+        margin-top: 0px;
+      }
+
+      .heading {
+        padding-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+  <a class="logo" href="index.html">
+    <img src="Image/Jasmin_chen.gif" alt="Jasmin Chen" class="header-logo">
+  </a>
+
+  <nav class="header-menu">
+    <a href="about.html">ABOUT ME</a>
+    <a href="Sketch.html">SKETCHBOOK</a>
+    <a href="index.html">HOME</a>
+  </nav>
+</header>
+
+  <section class="heading">
+    <p>A COLLECTION OF STORIES </p>
+    <h1>Narrative Illustration</h1>
+  </section>
+
+  <main class="gallery">
+    <a class="art" href="works/space.html">
+     <img class="picture" src="Image/principal hw space.png">
+      <div class="caption">New Yourk </div>
+      <div class="year">acrylic gouache · 2026</div>
+    </a>
+
+    <a class="art" href="works/train station.html">
+      <img class="picture" src="Image/continuous final.JPG" alt="My illustration">
+      <div class="caption">Train station</div>
+      <div class="year">gouache· 2026</div>
+    </a>
+
+    <a class="art" href="works/Beach.html">
+     <img class="picture" src="Image/drawing hw beach.png" alt="My illustration">
+      <div class="caption">Beach</div>
+      <div class="year">gouache. 2026 </div>
+    </a>
+
+    <a class="art" href="works/chariot.html">
+     <img class="picture" src="Image/principal hw the chartot.png" alt="My illustration">
+      <div class="caption">Caption</div>
+      <div class="year">Cgouache · 2026</div>
+    </a>
+
+ <a class="art" href="works/two girls.html">
+     <img class="picture" src="Image/two girls.tif" alt="My illustration">
+      <div class="caption">Two girls</div>
+      <div class="year">gouache· 2026</div>
+    </a>
+  
+    <a class="art" href="works/green house.html">
+     <img class="picture" src="Image/green house.tif" alt="My illustration">
+      <div class="caption">green house</div>
+      <div class="year">gouache · 2026</div>
+    </a>
+
+    <a class="art" href="works/bedroom.html">
+     <img class="picture" src="Image/my room.heic" alt="My illustration">
+      <div class="caption">Bedroom</div>
+      <div class="year">acrylic gouache · 2026</div>
+    </a>
+
+    <a class="art" href="works/blue poster.html">
+     <img class="picture" src="Image/Blue Poster.TIF" alt="My illustration">
+      <div class="caption">blue</div>
+      <div class="year"> acrylic gouache· 2026</div>
+    </a>
+  </main>
+
+  <footer>JASMIN — NARRATIVE ILLUSTRATION</footer>
+</body>
+</html>

@@ -1,0 +1,730 @@
+/* ===== 全站基础样式 ===== */
+body {
+  margin: 0;
+  background: #f3eee5;
+  color: #34332f;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+}
+
+/* ===== 页面主要内容 ===== */
+main {
+  padding: 100px 24px;
+}
+
+/* ===== 主标题 ===== */
+h1 {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(36px, 7vw, 80px);
+  font-weight: normal;
+}
+
+/* ===== 副标题和段落 ===== */
+h2,
+.subtitle {
+  font-family: 'Indie Flower', cursive;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* ===== 图片自适应 ===== */
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Narrative 页面文字字体 */
+.subtitle,
+.artwork-title,
+.artwork-info {
+  font-family: 'Indie Flower', cursive;
+}
+/* 作品图片的茉莉花背景 */
+.artwork-background {
+  background-color: #e9eaff;
+  background-image: none;
+  background-repeat: repeat;
+  background-position: center top;
+  background-size: 500px auto;
+
+  display: grid;
+  place-items: center;
+  width: calc(100vw - 48px);
+  margin-left: -24px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 作品图片 */
+.artwork-background .main-artwork {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 115px);
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* ===== 首页gif文字logo排版 ===== */
+.hero-text {
+  margin: -100px   0 5px;
+  padding: 0;
+  line-height: 1.2;
+}
+.hero-text img {
+  display: block;
+  width: 400px;
+  height: 210px;
+  object-fit: fill;
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.hero-text p {
+  margin: 3px 0;
+  font-size: 16px;
+  line-height: 1.3;
+   transform: translateY(-10px);
+}
+
+.hero-text h1 {
+  margin: 4px 0;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.1;
+}
+
+
+/* 首页菜单栏 */
+.home-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 35px;
+
+  width: 100%;
+  max-width: none;
+  margin: 0 0 12px;
+  padding-right: 30px;
+
+  box-sizing: border-box;
+  transform: translateY(20px);
+}
+
+.home-menu a {
+  color: #34332f;
+  text-decoration: none;
+  font-family: 'Special Elite', cursive;
+  font-size: 20px;
+  transition: opacity 0.2s ease;
+}
+
+.home-menu a:hover {
+  opacity: 0.55;
+}
+
+
+/* ===== 首页三个插画入口 ===== */
+.destinations {
+  text-align: center;
+  width: 100%;
+}
+
+.destination-block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+
+  width: 100%;
+  max-width: 1100px;
+  margin: 30px auto 0;
+  box-sizing: border-box;
+}
+
+/* 每一个按钮 */
+.destination-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  width: 280px;
+  flex-shrink: 0;
+
+  text-decoration: none;
+  color: #34332f;
+}
+
+/* 按钮图片 */
+.destination-button img {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  display: block;
+}
+
+/* 按钮文字 */
+.destination-button span {
+  margin-top: 12px;
+  font-family: 'Special Elite', cursive;
+  font-size: 18px;
+}
+
+/* 鼠标悬停效果 */
+.destination-button img {
+  transition: transform 0.25s ease;
+}
+
+.destination-button:hover img {
+  transform: translateY(-5px);
+}
+
+/* 循环滚动文字 */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 30px 0;
+  padding: 13px 0;
+
+  border-top: 3px solid #34332f;
+  border-bottom: 1px solid #34332f;
+
+  box-sizing: border-box;
+
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+.marquee-track span {
+  flex-shrink: 0;
+  font-family: 'Special Elite', monospace;
+  font-size: 34px;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  padding-right: 40px;
+}
+
+/* 滚动动画 */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ===== 首页主图与介绍的左右布局 ===== */
+
+/* 首页主图和介绍文字的背景区域 */
+
+/* 首页主图和介绍文字的全宽背景区域 */
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 5%;
+
+  width: 100vw;
+  max-width: none;
+  margin: 20px 0 20px calc(50% - 50vw);
+  padding: 25px max(calc((100vw - 1100px) / 2), 9%);
+
+  background-color: #e9eaff;
+  box-sizing: border-box;
+}
+
+/* 左侧主图 */
+.hero-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-image .home-background {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* 右侧介绍文字 */
+.hero-intro {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.hero-intro .intro-label {
+  font-family: 'Special Elite', monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.hero-intro h2 {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: normal;
+  line-height: 1.2;
+  margin: 16px 0;
+}
+
+.hero-intro p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* 手机屏幕布局 */
+@media (max-width: 700px) {
+  .hero-content {
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .hero-image,
+  .hero-intro {
+    width: 100%;
+    flex: auto;
+  }
+
+  .hero-intro {
+    padding: 10px;
+  }
+}
+
+
+/* ===== 速写本页面Sketchbook page ===== */
+
+
+/* ===== Sketchbook navigation ===== */
+
+.sketchbook-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 28px;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 5% 0;
+}
+
+.sketchbook-menu a {
+  color: #34332f;
+  text-decoration: none;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+}
+
+.sketchbook-menu a:hover {
+  opacity: 0.6;
+}
+
+/* ===== Sketchbook layout ===== */
+
+.sketchbook-main {
+  min-height: calc(100vh - 65px);
+  padding: 20px 24px 30px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sketchbook-title {
+  margin: 0 0 8px;
+}
+
+.sketchbook-instruction {
+  margin: 0 0 24px;
+}
+
+.sketchbook-stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}
+
+.sketchbook-spread {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Large open book */
+
+.sketchbook {
+  position: relative;
+  width: min(94vw, 1400px);
+  height: min(68vw, 78vh);
+  aspect-ratio: auto;
+  flex-shrink: 0;
+  perspective: 1600px;
+}
+
+
+/* ===== Mobile navigation ===== */
+
+@media (max-width: 600px) {
+  .sketchbook-menu {
+    gap: 14px;
+    padding: 18px 12px 0;
+    flex-wrap: wrap;
+  }
+
+  .sketchbook-menu a {
+    font-size: 15px;
+  }
+
+  .sketchbook-main {
+    padding: 24px 8px;
+  }
+
+  .sketchbook {
+    width: 96vw;
+  }
+}
+
+
+/* ===== Closed book cover ===== */
+
+.sketchbook-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+
+  box-sizing: border-box;
+  border: 1px solid #88745b;
+  border-radius: 5px 12px 12px 5px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #9b7654 0%,
+      #b18b65 4%,
+      #c6a47d 12%,
+      #b9956d 100%
+    );
+
+  color: #453629;
+  box-shadow:
+    5px 8px 0 #d5c8b5,
+    10px 14px 24px rgba(65, 48, 31, 0.18);
+
+  cursor: pointer;
+  transition:
+    opacity 0.45s ease,
+    transform 0.65s ease,
+    visibility 0.65s;
+}
+
+.cover-decoration {
+  font-size: 38px;
+}
+
+.cover-title {
+  font-family: 'Special Elite', monospace;
+  font-size: clamp(27px, 4vw, 46px);
+  line-height: 1.25;
+}
+
+.cover-author {
+  font-family: 'Indie Flower', cursive;
+  font-size: 19px;
+}
+
+.cover-hint {
+  margin-top: 18px;
+  font-family: 'Special Elite', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+/* ===== Open book spread ===== */
+
+.sketchbook-spread {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  overflow: hidden;
+
+  border-radius: 4px;
+  background: #e9deca;
+  box-shadow: 0 14px 30px rgba(65, 48, 31, 0.18);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.94);
+
+  transition:
+    opacity 0.45s ease,
+    transform 0.65s ease,
+    visibility 0.65s;
+}
+
+
+
+.sketchbook-page-left,
+.sketchbook-page-right {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  background-color: #faf5e9;
+  background-image: url("Image/paper-\ texture.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.sketchbook-page-left {
+  border-right: 1px solid #d8cbb6;
+  box-shadow: inset -10px 0 16px -14px rgba(60, 45, 30, 0.5);
+}
+
+.sketchbook-page-right {
+  box-shadow: inset 10px 0 16px -14px rgba(60, 45, 30, 0.5);
+}
+
+.page-number {
+  font-family: 'Special Elite', monospace;
+  font-size: 12px;
+  color: #9a8a75;
+}
+
+.page-note {
+  margin-top: 45px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 19px;
+  color: #847765;
+}
+
+/* ===== Open state ===== */
+
+.sketchbook.is-open .sketchbook-cover {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateY(-12deg) scale(0.96);
+  pointer-events: none;
+}
+
+.sketchbook.is-open .sketchbook-spread {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.sketchbook-bottom-note {
+  margin-top: 35px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 18px;
+}
+
+/* ===== Mobile layout ===== */
+
+@media (max-width: 600px) {
+  .sketchbook-main {
+    padding: 35px 12px 45px;
+  }
+
+  .sketchbook {
+    width: 96vw;
+  }
+
+  .sketchbook-page-left,
+  .sketchbook-page-right {
+    padding: 14px;
+  }
+
+  .page-note {
+    margin-top: 25px;
+    font-size: 15px;
+  }
+
+  .cover-author {
+    font-size: 15px;
+  }
+
+  .cover-hint {
+    font-size: 9px;
+  }
+}
+
+/* ===== 速写本中的作品Artwork inside sketchbook ===== */
+
+.sketchbook-page-left,
+.sketchbook-page-right {
+  position: relative;
+}
+
+.page-number {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  z-index: 1;
+}
+
+.sketchbook-artwork {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.sketchbook-artwork {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+}
+/* ===== Sketchbook page flip ===== */
+
+#flipbook {
+  margin: 0 auto;
+  position: relative;
+  background: #e5d8c2;
+  box-shadow:
+    0 3px 0 #d8c9b2,
+    0 6px 0 #eee3d0,
+    0 9px 0 #d5c4aa,
+    0 13px 0 #e9dcc8,
+    0 18px 24px rgba(57, 43, 29, 0.22);
+}
+
+
+#flipbook .page {
+  background-color: #faf5e9;
+  background-image: url("Image/paper-texture.jpg");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+#flipbook .page img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ===== Sketchbook spine ===== */
+
+#flipbook {
+  position: relative;
+}
+
+/* ===== Natural sketchbook spine ===== */
+
+#flipbook {
+  position: relative;
+}
+
+/* 柔和的装订阴影与纸张反光 */
+#flipbook::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 38px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 20;
+
+  background: linear-gradient(
+    to right,
+    rgba(83, 62, 42, 0) 0%,
+    rgba(83, 62, 42, 0.07) 20%,
+    rgba(65, 47, 32, 0.18) 42%,
+    rgba(255, 252, 240, 0.30) 50%,
+    rgba(65, 47, 32, 0.15) 58%,
+    rgba(83, 62, 42, 0.06) 80%,
+    rgba(83, 62, 42, 0) 100%
+  );
+}
+/* 左页靠近装订处的阴影 */
+#flipbook .page:nth-child(odd) {
+  box-shadow: inset -8px 0 12px -10px rgba(65, 47, 32, 0.35);
+}
+
+/* 右页靠近装订处的阴影 */
+#flipbook .page:nth-child(even) {
+  box-shadow: inset 8px 0 12px -10px rgba(65, 47, 32, 0.35);
+}
+/* 右侧叠页：更自然的纸张边缘 */
+#flipbook::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: -8px;
+  right: -5px;
+  width: 5px;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    #eee5d5 0px,
+    #eee5d5 2px,
+    #d9cbb7 2.5px,
+    #f7f0e3 4px
+  );
+
+  border-right: 1px solid rgba(125, 101, 72, 0.15);
+  border-radius: 0 1px 2px 0;
+  box-shadow: 2px 3px 5px rgba(57, 43, 29, 0.10);
+
+  z-index: 5;
+  pointer-events: none;
+}
+/* 左上角 Logo */
+.detail-logo {
+  position: fixed;
+  top: 12px;
+  left: 24px;
+  z-index: 10;
+  display: block;
+  width: 170px;
+}
+
+.detail-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
