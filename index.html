@@ -16,94 +16,225 @@
     <!-- First screen: Welcome -->
     <section class="hero" id="home">
 
-      <!-- 顶部gif 文字logo -->
-     <div class="hero-text">
-  <img src="Image/Jasmin_chen.gif" alt="Welcome to Jasmin's illustration portfolio">
-</div>
+      <!-- Logo + Menu background -->
+      <div class="header-background">
 
-      <!-- 顶部右侧菜单栏 -->
-      <nav class="home-menu">
-        <a href="About.html">About Me</a>
-        <a href="Sketch.html">Sketchbook</a>
-        <a href="Narrative.html">Narrative Illustration</a>
-      </nav>
-
-      <!-- 主图在左，介绍文字在右 -->
-      <div class="hero-content">
-
-        <!-- 左侧主图 -->
-        <div class="hero-image">
-          <img
-            class="home-background"
-            src="Image/two girls.tif"
-            alt="Illustration of two girls">
+        <!-- Logo -->
+        <div class="hero-text">
+          <img src="Image/ps main logo.png" alt="Jasmin Chen">
         </div>
 
-        <!-- 右侧介绍文字 -->
-        <div class="hero-intro">
-          <p class="intro-label">A LITTLE INTRODUCTION</p>
-
-          <h2>Welcome to my world.</h2>
-
-          <p>
-            Hi, I'm Jasmin, an illustrator who loves
-            drawing detailed scenes, expressive characters,
-            and little stories hidden in everyday life.
-          </p>
-
-          <p>
-            Take a look around and discover the stories
-            behind my illustrations.
-          </p>
-        </div>
+        <!-- Menu -->
+        <nav class="home-menu">
+          <a href="About.html">About Me</a>
+          <a href="Sketch.html">Sketchbook</a>
+          <a href="Narrative.html">Narrative Illustration</a>
+        </nav>
 
       </div>
 
-      <!-- 循环滚动文字 -->
-      <div class="marquee">
-        <div class="marquee-track">
-          <span>JASMIN ✳ ILLUSTRATION ✳ Where would you like to go? ✳ </span>
-          <span>JASMIN ✳ ILLUSTRATION ✳ Where would you like to go? ✳ </span>
-          <span>JASMIN ✳ ILLUSTRATION ✳ Where would you like to go? ✳ </span>
-        </div>
-      </div>
-
-      
+         
     </section>
 
-    <!-- Second screen: Illustrated navigation -->
+    <!-- Homepage artwork gallery -->
+    <section class="artwork-gallery" id="gallery">
+
+      <div class="gallery-heading">
+  <img
+    src="Image/Title_Illustration.png"
+    alt="Illustration"
+    class="section-title-image"
+  >
+  <p>✳click to see more ✳</p>
+</div>
+
+      <div class="gallery-window">
+        <a href="Narrative.html" class="gallery-link">
+          <div class="gallery-track">
+
+            <!-- Original artworks -->
+            <img src="Image/artwork1.jpg" alt="Illustration artwork 1">
+            <img src="Image/artwork2.jpg" alt="Illustration artwork 2">
+            <img src="Image/artwork3.jpg" alt="Illustration artwork 3">
+            <img src="Image/artwork4.jpg" alt="Illustration artwork 4">
+
+            <!-- Repeated artworks for continuous scrolling -->
+            <img src="Image/artwork1.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork2.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork3.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork4.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork2.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork3.jpg" alt="" aria-hidden="true">
+            <img src="Image/artwork4.jpg" alt="" aria-hidden="true">
+
+          </div>
+        </a>
+      </div>
+
+    </section>
+    <!-- Sketchbook carousel -->
+<section class="sketchbook-section" id="sketchbook">
+
+  <div class="sketchbook-heading">
+  <img
+    src="Image/Title_Sketch_Book_.png"
+    alt="My Sketchbook Tour"
+    class="section-title-image"
+  >
+  <p>✳ Things in Progress ✳</p>
+</div>
+
+  <div class="sketchbook-carousel">
+
+<div class="sketchbook-stage">
+
+  
+<div class="sketch-page sketch-left" title="Previous page">
+  <img src="Image/sketch page1.jpg" alt="Previous sketchbook page">
+</div>
+
+<div class="sketch-page sketch-center" title="Current page">
+  <img src="Image/sketch page2.jpg" alt="Current sketchbook page">
+</div>
+
+<div class="sketch-page sketch-right" title="Next page">
+  <img src="Image/sketch page3.jpg" alt="Next sketchbook page">
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+    <!-- Illustrated navigation -->
     <section class="destinations" id="destinations">
 
-      <h2>Choose your destination</h2>
+     
 
+    
+<section class="footer-destinations">
+  <div class="destination-block">
+
+    <!-- About Me -->
+    <a href="About.html" class="destination-button">
+      <img src="Image/footage_logo_about_me.png" alt="About Me">
       
-<div class="destination-block">
+    </a>
 
-  <a class="destination-button" href="About.html">
-    <img src="Image/gif_logo_home_page.gif" alt="">
-    <span>About Me</span>
-  </a>
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/jasss.zip/"
+       class="destination-button"
+       target="_blank"
+       rel="noopener noreferrer">
+      <img src="Image/footage_logo_ins.png" alt="Instagram">
+  
+    </a>
 
-  <a class="destination-button" href="Sketch.html">
-    <img src="Image/sketch_book_button.png" alt="">
-    <span>Sketchbook</span>
-  </a>
+    <!-- Email -->
+    <a href="mailto:qingyunchen2@gmail.com" class="destination-button">
+      <img src="Image/footage_logo_Email.png" alt="Email">
+     
+    </a>
 
-  <a class="destination-button" href="Narrative.html">
-    <img src="Image/narrative_illustration_button.png" alt="">
-    <span>Narrative Illustration</span>
-  </a>
+    </div>
 
-</div>
+  </section>
+
+<footer class="site-footer">
+  © Jasmin Chen | Where to Find Me ✳
+</footer>
+
+</main>
 
 
-    </section>
 
-  </main>
 
-  <footer>
-    © Jasmin | Contact: qchen33@sva.edu
-  </footer>
+<script>
+  const sketchImages = [
+    "Image/sketch page1.jpg",
+    "Image/sketch cover.png",
+    "Image/sketch page2.jpg",
+    "Image/sketch page3.jpg",
+    "Image/sketch page4.jpg",
+    "Image/sketch page5.jpg"
+  ];
+
+  // 封面是数组的第 2 张，编号为 1
+  let currentSketch = 1;
+
+  
+function updateSketchbook() {
+  const stage = document.querySelector(
+    ".sketchbook-section .sketchbook-stage"
+  );
+
+  if (!stage) return;
+
+  const leftPage = stage.querySelector(".sketch-left");
+  const centerPage = stage.querySelector(".sketch-center");
+  const rightPage = stage.querySelector(".sketch-right");
+
+  if (!leftPage || !centerPage || !rightPage) return;
+
+  const leftImg = leftPage.querySelector("img");
+  const centerImg = centerPage.querySelector("img");
+  const rightImg = rightPage.querySelector("img");
+
+  const total = sketchImages.length;
+  const previous = (currentSketch - 1 + total) % total;
+  const next = (currentSketch + 1) % total;
+
+  leftImg.src = sketchImages[previous];
+  centerImg.src = sketchImages[currentSketch];
+  rightImg.src = sketchImages[next];
+
+  leftImg.alt = "Sketchbook page " + (previous + 1);
+  centerImg.alt = "Sketchbook page " + (currentSketch + 1);
+  rightImg.alt = "Sketchbook page " + (next + 1);
+
+  // 点击左侧区域
+  leftPage.onclick = function() {
+    if (sketchImages[previous].includes("sketch cover.png")) {
+      window.location.href = "Sketch.html";
+    } else {
+      changeSketch(-1);
+    }
+  };
+
+  // 点击中间封面
+  centerPage.onclick = function() {
+    if (sketchImages[currentSketch].includes("sketch cover.png")) {
+      window.location.href = "Sketch.html";
+    }
+  };
+
+  // 点击右侧区域
+  rightPage.onclick = function() {
+    if (sketchImages[next].includes("sketch cover.png")) {
+      window.location.href = "Sketch.html";
+    } else {
+      changeSketch(1);
+    }
+  };
+
+  leftPage.style.cursor = "pointer";
+  centerPage.style.cursor = "pointer";
+  rightPage.style.cursor = "pointer";
+}
+
+function changeSketch(direction) {
+  const total = sketchImages.length;
+
+  currentSketch = (currentSketch + direction + total) % total;
+
+  updateSketchbook();
+}
+  updateSketchbook();
+</script>
 
 </body>
 </html>
+
