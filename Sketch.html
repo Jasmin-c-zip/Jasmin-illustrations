@@ -13,22 +13,29 @@
 </head>
 
 <body class="sketchbook-page">
+  <header class="inner-header">
 
-  <nav class="sketchbook-menu">
-    <a href="index.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="narrative.html">Narrative Illustrated</a>
-  </nav>
+  <a href="index.html" class="header-logo">
+    <img src="Image/ps main logo.png" alt="Jasmin Chen">
+  </a>
+
+    <nav class="header-menu">
+  <a href="index.html">HOME</a>
+  <a href="About.html">ABOUT</a>
+  <a href="Sketch.html">SKETCH</a>
+  <a href="Narrative.html">ILLUSTRATION</a>
+</nav>
+
+</header>
+
 
   <main class="sketchbook-main">
 
-  <main class="sketchbook-main">
+   <div class="sketchbook-title">
+  <img src="Image/Title_Sketch_Book_.png" alt="My Sketchbook">
+</div>
 
-    <h1 class="sketchbook-title">My Sketchbook</h1>
-
-    <p class="sketchbook-instruction">
-      photo studies * figure drawing practice * and little ideas along the way.
-    </p>
+  
 
     <div class="sketchbook-stage">
 
@@ -68,22 +75,22 @@
   const book = document.getElementById("flipbook");
 
   const pageFlip = new St.PageFlip(book, {
-  width: 800,
-  height: 1000,
-  size: "stretch",
-  minWidth: 400,
-  maxWidth: 800,
-  minHeight: 500,
-  maxHeight: 1000,
+  width: 550,
+  height: 687,
+  size: "fixed",
+  minWidth: 550,
+  maxWidth: 550,
+  minHeight: 687,
+  maxHeight: 687,
   showCover: false,
   usePortrait: false,
   maxShadowOpacity: 0.3,
   mobileScrollSupport: false
 });
-
   pageFlip.loadFromHTML(
     document.querySelectorAll("#flipbook .page")
   );
 </script>
 </body>
 </html>
+
