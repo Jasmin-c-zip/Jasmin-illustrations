@@ -16,11 +16,11 @@
     }
 
     body {
-      margin: 0;
-      background: #f5f1e9;
-      color: #33312e;
-      font-family: 'Special Elite', cursive;
-    }
+  margin: 0;
+  background: #FFFDF4;
+  color: #33312e;
+  font-family: 'Special Elite', cursive;
+}
 
     header {
   display: flex;
@@ -51,7 +51,7 @@
 .header-menu {
   display: flex;
   align-items: flex-end;
-  gap: 24px;
+
 }
 
 .header-menu a {
@@ -68,8 +68,11 @@
 }
 
     .heading {
-      padding: 36px 5% 45px;
-    }
+  width: 84%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 25px 0 0px;
+}
 
     .heading p {
       font: 20px 'Indie Flower', cursive;
@@ -83,17 +86,22 @@
     }
 
     .gallery {
-      padding: 0 5% 80px;
-      columns: 2;
-      column-gap: 40px;
-    }
+  width: 84%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 40px;
 
-    .art {
-      display: inline-block;
-      width: 100%;
-      margin-bottom: 20px;
-      break-inside: avoid;
-    }
+  columns: 2;
+  column-gap: 65px;
+}
+
+   .art {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  break-inside: avoid;
+}
+
 
     .art:nth-child(even) {
       margin-top: 0px;
@@ -141,16 +149,31 @@
     }
 
     .caption {
-      padding-top: 13px;
-      font-size: 18px;
-    }
+  padding-top: 14px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.4;
+}
 
-    .year {
-      margin-top: 5px;
-      font: 15px 'Indie Flower', cursive;
-      color: #898078;
-    }
+.year {
+  margin-top: 5px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 15px;
+  color: #898078;
+}
 
+.description {
+  margin-top: 10px;
+  width: 85%;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Indie Flower', cursive;
+  font-size: 17px;
+  line-height: 1.6;
+  color: #6f6a62;
+}
     footer {
       padding: 25px 5%;
       font: 11px 'Indie Flower', cursive;
@@ -170,77 +193,211 @@
         padding-top: 40px;
       }
     }
+    
+/* ===== 分类筛选菜单 ===== */
+.category-menu {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+
+  width: 100%;
+  padding: 16px 20px;
+  margin-top: -30px;
+  margin-bottom: 20px;
+
+  background-color: #FFFDF4;
+ 
+
+  font-family: 'Indie Flower', cursive;
+  font-size: 21px;
+}
+
+.filter-btn {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #33312e;
+  font-family: 'Indie Flower', cursive;
+  font-size: 21px;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.filter-btn:hover {
+  opacity: 0.5;
+}
+
+.filter-btn.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.art.wide .picture {
+  width: 140%;
+  max-width: none;
+  margin-left: -10%;
+}
+
+.art.portrait .picture {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.art.portrait-wide .picture {
+  width: 115%;
+  max-width: none;
+  margin-left: -7.5%;
+}
+
   </style>
 </head>
 
 <body>
-  <header>
-  <a class="logo" href="index.html">
-    <img src="Image/ps main logo.png" alt="Jasmin Chen" class="header-logo">
+ <header class="inner-header">
+
+  <a href="index.html" class="header-logo">
+    <img src="Image/ps main logo.png" alt="Jasmin Chen">
   </a>
 
   <nav class="header-menu">
-    <a href="about.html">ABOUT ME</a>
-    <a href="Sketch.html">SKETCHBOOK</a>
     <a href="index.html">HOME</a>
+    <a href="About.html">ABOUT</a>
+    <a href="Sketch.html">SKETCH</a>
+    <a href="Narrative.html">ILLUSTRATION</a>
   </nav>
+
 </header>
 
   <section class="heading">
-    <p>A COLLECTION OF STORIES </p>
-    <h1>Narrative Illustration</h1>
+  
+    <img class="illustration-title"
+     src="Image/Title_Illustration.png"
+     alt="Narrative Illustration">
   </section>
 
+<nav class="category-menu">
+  <button class="filter-btn active" data-filter="all">All Work</button>
+  <span> </span>
+  <button class="filter-btn" data-filter="Book">Book</button>
+  <span> </span>
+  <button class="filter-btn" data-filter="Poster">Poster</button>
+  <span> </span>
+  <button class="filter-btn" data-filter="New-York">New York</button>
+</nav>
   <main class="gallery">
-    <a class="art" href="works/space.html">
+    <a class="art New York" data-category="New-York" href="works/space.html">
      <img class="picture" src="Image/principal hw space.png">
-      <div class="caption">New Yourk </div>
+      <div class="caption">New York </div>
       <div class="year">acrylic gouache · 2026</div>
+       <div class="description">
+    A visual collection of New York, bringing together familiar icons with the stickers and details found throughout the city's streets and stations.
+  </div>
     </a>
 
-    <a class="art" href="works/train station.html">
-      <img class="picture" src="Image/continuous final.JPG" alt="My illustration">
-      <div class="caption">Train station</div>
+  <a class="art Nap portrait" data-category="Book" href="works/two girls.html">
+     <img class="picture" src="Image/two girls.tif" alt="My illustration">
+      <div class="caption">Nap</div>
       <div class="year">gouache· 2026</div>
-    </a>
+       <div class="description">
+    A cozy childhood moment imagined through children's book illustration.
+  </div>
 
-    <a class="art" href="works/Beach.html">
+    <a class="art Beach portrait" data-category="Book" href="works/Beach.html">
      <img class="picture" src="Image/drawing hw beach.png" alt="My illustration">
       <div class="caption">Beach</div>
       <div class="year">gouache. 2026 </div>
+       <div class="description">
+    A playful beachside moment featuring a girl watching a seagull with a stolen french fry.
     </a>
 
-    <a class="art" href="works/chariot.html">
+    <a class="art Chariot portrait-wide" data-category="Poster" href="works/chariot.html">
      <img class="picture" src="Image/principal hw the chartot.png" alt="My illustration">
-      <div class="caption">Caption</div>
+      <div class="caption">Chariot</div>
       <div class="year">Cgouache · 2026</div>
+       <div class="description">
+    A reimagining of The Chariot, replacing the  warrior with a pirate captain and the two sphinxes with giant octopus tentacles.
+  </div>
     </a>
 
- <a class="art" href="works/two girls.html">
-     <img class="picture" src="Image/two girls.tif" alt="My illustration">
-      <div class="caption">Two girls</div>
+    </a>
+
+    <a class="art Train station wide" data-category="New-York" href="works/train station.html">
+      <img class="picture" src="Image/continuous final.JPG" alt="My illustration">
+      <div class="caption">Train station</div>
       <div class="year">gouache· 2026</div>
-    </a>
-  
-    <a class="art" href="works/green house.html">
-     <img class="picture" src="Image/green house.tif" alt="My illustration">
-      <div class="caption">green house</div>
-      <div class="year">gouache · 2026</div>
+       <div class="description">
+    Combining familiar elements of everyday subway spaces,transforms an ordinary setting into an imagined world that seems to stretch on endlessly.
+  </div>
     </a>
 
-    <a class="art" href="works/bedroom.html">
+    <a class="art Bedroom wide" data-category="Book" href="works/bedroom.html">
      <img class="picture" src="Image/my room.heic" alt="My illustration">
       <div class="caption">Bedroom</div>
       <div class="year">acrylic gouache · 2026</div>
+       <div class="description">
+    playful collection of moments.
+  </div>
+  
+    <a class="art Green house wide" data-category="Book" href="works/green house.html">
+     <img class="picture" src="Image/green house.tif" alt="My illustration">
+      <div class="caption">Green house</div>
+      <div class="year">gouache · 2026</div>
+       <div class="description">
+    A little raccoon tending to its plants, imagined in the spirit of a children's book.
+  </div>
     </a>
 
-    <a class="art" href="works/blue poster.html">
+    </a>
+
+    <a class="art Blue portrait-wide" data-category="Poster" href="works/blue poster.html">
      <img class="picture" src="Image/Blue Poster.TIF" alt="My illustration">
-      <div class="caption">blue</div>
+      <div class="caption">Blue</div>
       <div class="year"> acrylic gouache· 2026</div>
+       <div class="description">
+    A poster inspired by the film Blue, capturing its original mood and atmosphere.
+  </div>
     </a>
   </main>
 
-  <footer>JASMIN — NARRATIVE ILLUSTRATION</footer>
+  <footer>JASMIN — ILLUSTRATION</footer>
 </body>
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const artworks = document.querySelectorAll('.art');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+      const selectedFilter = button.dataset.filter;
+
+      // 更新当前菜单的选中状态
+      filterButtons.forEach(btn => {
+        btn.classList.remove('active');
+      });
+
+      button.classList.add('active');
+
+      // 筛选作品
+      artworks.forEach(art => {
+        const categories = art.dataset.category.split(' ');
+
+        if (
+          selectedFilter === 'all' ||
+          categories.includes(selectedFilter)
+        ) {
+          art.style.display = 'inline-block';
+        } else {
+          art.style.display = 'none';
+        }
+      });
+
+    });
+  });
+</script>
 </html>
