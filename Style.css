@@ -778,6 +778,7 @@ img {
 
 /* Scroll left */
 @keyframes gallery-scroll {
+  
   from {
     transform: translateX(0);
   }
@@ -1188,4 +1189,29 @@ body {
   height: auto;
   margin: 0 auto 20px;
   transform: translateY(-10px);
+}
+/* Instagram Reel Link */
+.instagram-link {
+  position: fixed;
+  left: 25px;
+  bottom: 20px;
+  z-index: 9999;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+   display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.instagram-link img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+
+.instagram-link:hover {
+  opacity: 0.55;
 }
