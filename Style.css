@@ -96,29 +96,56 @@ img {
 }
 
 
-/* 首页菜单栏 */
+
+/* =================================
+   HOMEPAGE MENU
+================================= */
+
 .home-menu {
+  position: absolute;
+  top: 75%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 35px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 15px 0;
-  box-sizing: border-box;
+
+  gap: 15px;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
- 
 
 .home-menu a {
-  color: #34332f;
-  text-decoration: none;
+  display: block;
   font-family: 'Special Elite', cursive;
   font-size: 20px;
-  transition: opacity 0.2s ease;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #284354;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .home-menu a:hover {
-  opacity: 0.55;
+  transform: scale(1.08);
+  opacity: 0.6;
+}
+
+/* MOBILE MENU */
+
+@media screen and (max-width: 600px) {
+  .home-menu {
+    gap: 8px;
+  }
+
+  .home-menu a {
+    font-size: 20px;
+  }
 }
 
 .header-background {
