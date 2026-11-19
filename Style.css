@@ -96,56 +96,29 @@ img {
 }
 
 
-
-/* =================================
-   HOMEPAGE MENU
-================================= */
-
+/* 首页菜单栏 */
 .home-menu {
-  position: absolute;
-  top: 75%;
-  left: 49%;
-  transform: translate(-50%, -50%);
-
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  gap: 15px;
-  width: auto;
-  margin: 0;
-  padding: 0;
+  gap: 35px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 15px 0;
+  box-sizing: border-box;
 }
+ 
 
 .home-menu a {
-  display: block;
+  color: #34332f;
+  text-decoration: none;
   font-family: 'Special Elite', cursive;
   font-size: 20px;
-  font-weight: normal;
-  line-height: 1.2;
-  color: #284354;
-  text-decoration: none;
-  white-space: nowrap;
-
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: opacity 0.2s ease;
 }
 
 .home-menu a:hover {
-  transform: scale(1.08);
-  opacity: 0.6;
-}
-
-/* MOBILE MENU */
-
-@media screen and (max-width: 600px) {
-  .home-menu {
-    gap: 8px;
-  }
-
-  .home-menu a {
-    font-size: 20px;
-  }
+  opacity: 0.55;
 }
 
 .header-background {
@@ -1241,11 +1214,7 @@ body {
 .instagram-link:hover {
   opacity: 0.55;
 }
-
-
-/* =================================
-   HOMEPAGE MENU
-================================= */
+/* ===== Homepage Game Style Header ===== */
 
 .header-background {
   position: relative;
@@ -1253,49 +1222,60 @@ body {
   padding: 0;
   margin: 0;
   overflow: hidden;
+  background-color: #e5fff6;
   box-sizing: border-box;
 }
 
+/* Header background image */
+.home-header-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Vertical menu on top of the image */
 .home-menu {
   position: absolute;
-  top: 50%;
+  top: 75%;
   left: 49%;
   transform: translate(-50%, -50%);
 
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  gap: 15px;
+  gap: 27px;
   width: auto;
   margin: 0;
   padding: 0;
 }
 
+/* Menu text */
 .home-menu a {
-  display: block;
-  font-family: 'Special Elite', cursive !important;
-  font-size: 14px !important;
-  font-weight: normal;
-  line-height: 1.2;
-  color: #284354;
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+ color: #284354;
   text-decoration: none;
   white-space: nowrap;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
+/* Hover effect */
 .home-menu a:hover {
+  transform: scale(1.08);
   opacity: 0.6;
 }
 
-/* MOBILE */
-
-@media screen and (max-width: 600px) {
+/* Mobile adjustment */
+@media (max-width: 600px) {
   .home-menu {
+    flex-direction: column;
     gap: 8px;
   }
 
   .home-menu a {
-    font-size: 14px !important;
+    font-size: 24px;
   }
 }
