@@ -1270,6 +1270,7 @@ body {
 
 /* Mobile adjustment */
 @media (max-width: 600px) {
+}
   .home-menu {
     gap: 8px;
   }
@@ -1277,4 +1278,3 @@ body {
   .home-menu a {
     font-size: 13px;
   }
-}
