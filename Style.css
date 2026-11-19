@@ -1247,10 +1247,10 @@ body {
 ================================= */
 
 .home-menu {
-  position: absolute;
-  top: 75%;
-  left: 49%;
-  transform: translate(-50%, -50%);
+  position: absolute!important;
+  top: 75%!important;
+  left: 49%!important;
+  transform: translate(-50%, -50%)!important;
 
   display: flex;
   flex-direction: column;
@@ -1271,7 +1271,7 @@ body {
   line-height: 1.2!important;
   color: #284354!important;
   text-decoration: none!important;
-  white-space: nowrap;
+  white-space: nowrap!important;
 
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
