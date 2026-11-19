@@ -778,7 +778,6 @@ img {
 
 /* Scroll left */
 @keyframes gallery-scroll {
-  
   from {
     transform: translateX(0);
   }
@@ -1214,4 +1213,68 @@ body {
 
 .instagram-link:hover {
   opacity: 0.55;
+}
+/* ===== Homepage Game Style Header ===== */
+
+.header-background {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  background-color: #e5fff6;
+  box-sizing: border-box;
+}
+
+/* Header background image */
+.home-header-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+/* Vertical menu on top of the image */
+.home-menu {
+  position: absolute;
+  top: 75%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 27px;
+  width: auto;
+  margin: 0;
+  padding: 0;
+}
+
+/* Menu text */
+.home-menu a {
+  font-family: 'Special Elite', cursive;
+  font-size: 24px;
+ color: #284354;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+/* Hover effect */
+.home-menu a:hover {
+  transform: scale(1.08);
+  opacity: 0.6;
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .home-menu {
+    gap: 8px;
+  }
+
+  .home-menu a {
+    font-size: 13px;
+  }
 }
